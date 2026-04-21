@@ -1,123 +1,106 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Mon Profil - Khady Sall</title>
+<meta charset="UTF-8">
+<title>Ouldadah Shop</title>
 
-    <style>
-        body {
-            font-family: Arial;
-            background-color: #f4f4f4;
-            margin: 0;
-        }
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f5f5f5;
+}
 
-        header {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+header {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 
-        section {
-            padding: 20px;
-            margin: 20px;
-            background: white;
-            border-radius: 10px;
-        }
+h1 {
+    margin: 0;
+}
 
-        img {
-            width: 150px;
-            border-radius: 50%;
-        }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-        h2 {
-            color: #003366;
-        }
+.produit {
+    background: white;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
 
-        ul {
-            list-style: none;
-        }
+.produit img {
+    width: 100%;
+    border-radius: 10px;
+}
 
-        li {
-            margin: 5px 0;
-        }
-    </style>
+button {
+    background: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>Bienvenue sur mon site personnel</h1>
-    <p>Présentation de Khady Sall</p>
+    <h1>Ouldadah Shop</h1>
+    <p>Boutique de tenues pour femme musulmane</p>
 </header>
 
-<section>
-    <h2>👩‍🎓 Informations personnelles</h2>
-    <img src="photo.jpg" alt="Ma photo">
-    <ul>
-        <li><strong>Prénom :</strong> Khady</li>
-        <li><strong>Nom :</strong> Sall</li>
-        <li><strong>Email :</strong> sallkhady855@gmail.com</li>
-        <li><strong>Adresse :</strong> Nord Foire</li>
-        <li><strong>Téléphone :</strong> 706942799</li>
-    </ul>
-</section>
+<div class="container">
 
-<section>
-    <h2>🎓 Parcours académique</h2>
-    <p>
-        Je suis étudiante à l'Ecole Supérieure Polytechnique de Dakar (ESP).
-        Je suis actuellement en troisième année de formation en systèmes réseaux et télécommunications
-        au département Génie Informatique.
-    </p>
-</section>
+    <div class="produit">
+        <img src="djilbab1.jpg">
+        <h3>Djilbab Noir</h3>
+        <p>Prix : 15 000 FCFA</p>
+        <button onclick="commander('Djilbab Noir')">Commander</button>
+    </div>
 
-<section>
-    <h2>🏫 Départements de l’ESP</h2>
-    <ul>
-        <li>Génie Informatique</li>
-        <li>Génie Électrique</li>
-        <li>Génie Mécanique</li>
-        <li>Génie Civil</li>
-        <li>Gestion</li>
-    </ul>
-</section>
+    <div class="produit">
+        <img src="djilbab2.jpg">
+        <h3>Djilbab Beige</h3>
+        <p>Prix : 18 000 FCFA</p>
+        <button onclick="commander('Djilbab Beige')">Commander</button>
+    </div>
 
-<section>
-    <h2>📚 Formations disponibles</h2>
-    <ul>
-        <li>Licence (L1, L2, L3)</li>
-        <li>Master</li>
-        <li>Doctorat</li>
-        <li>Formations professionnelles</li>
-    </ul>
-</section>
+    <div class="produit">
+        <img src="djilbab3.jpg">
+        <h3>Djilbab Bleu</h3>
+        <p>Prix : 17 000 FCFA</p>
+        <button onclick="commander('Djilbab Bleu')">Commander</button>
+    </div>
 
-<section>
-    <h2>💖 Mes centres d’intérêt</h2>
-    <ul>
-        <li>Cuisine 🍳</li>
-        <li>Navigation sur Internet 🌐</li>
-        <li>Apprentissage des technologies 💻</li>
-    </ul>
-</section>
+</div>
 
-<section>
-    <h2>💼 Compétences</h2>
-    <p>
-        Je sais faire la ventouse (thérapie traditionnelle).
-        Si vous êtes intéressé(e), vous pouvez me contacter.
-    </p>
-</section>
+<footer>
+    <p>Contact : 766129958 / 706942799</p>
+</footer>
 
-<section>
-    <h2>📞 Contact</h2>
-    <p>Numéros disponibles :</p>
-    <ul>
-        <li>766129958</li>
-        <li>706942799</li>
-    </ul>
-</section>
+<script>
+function commander(produit) {
+    let numero = "221766129958";
+    let message = "Bonjour, je veux commander : " + produit;
+    let url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(message);
+    window.open(url);
+}
+</script>
 
 </body>
 </html>
